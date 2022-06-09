@@ -1,0 +1,6 @@
+//* Disable the Superfish script
+add_action( 'wp_enqueue_scripts', 'sp_disable_superfish' );
+function sp_disable_superfish() {
+    wp_deregister_script( 'superfish' );
+    wp_deregister_script( 'superfish-args' );
+}
