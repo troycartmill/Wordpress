@@ -1,3 +1,4 @@
+// For the Wordpress Rankmath plugin, this code outputs the primary category.
 $primary_cat_id = get_post_meta( $product->id, 'rank_math_primary_category', true );
 if ( $primary_cat_id ) {
     $product_cat = get_term( $primary_cat_id, 'product_cat' );
