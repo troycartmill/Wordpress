@@ -1,0 +1,50 @@
+/*-----------------------------------------------------------------------------------*/
+//* START Custom Login Page
+/*-----------------------------------------------------------------------------------*/
+/** Add custom styles of login page */
+function rs22_custom_login_logo() {
+    echo '<style type="text/css">
+    .login h1 {
+    	background: #ffffff;
+    }
+ 	.login h1 a {
+		background-image:url('.get_bloginfo('wpurl').'/wp-content/uploads/) !important;
+		background-size: 320px 100px;
+		margin: 0 auto;
+		width: 320px !important;
+		height: 100px !important;
+	}
+	body.login {
+		background-color: #eeeeee !important;
+	}
+	.wp-core-ui .button-primary {
+		background-color: #000000;
+		border-color: #000000;
+	}
+	.wp-core-ui:hover .button-primary:hover {
+		background-color: #313131;
+		border-color: #313131;
+	}
+	#loginform,
+	#login_error,
+	.login .message {
+		margin-top:0;
+		border-radius: 0px;
+		border-width: 0px;
+		border-style: none;
+	}
+   		 </style>';
+}
+add_action('login_head', 'rs22_custom_login_logo');
+
+/** Changes link on login page */
+function rs22_loginpage_custom_link() {
+	return '//domain.com/';
+}
+add_filter('login_headerurl','rs22_loginpage_custom_link');
+
+/** Changes title when hovered over logo on login page */
+function rs22_change_title_on_logo() {
+	return 'Welcome to the Company Name';
+}
+add_filter('login_headertitle', 'rs22_change_title_on_logo');
