@@ -1,5 +1,5 @@
 // Removes dashboard widgets
-function apexpipe17_remove_dashboard_widgets() {
+function rs22_remove_dashboard_widgets() {
 global $wp_meta_boxes;
     unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
     unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);
@@ -10,4 +10,4 @@ global $wp_meta_boxes;
     unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
     unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
 } 
-add_action('wp_dashboard_setup', 'apexpipe17_remove_dashboard_widgets' );
+add_action('wp_dashboard_setup', 'rs22_remove_dashboard_widgets' );
