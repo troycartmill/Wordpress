@@ -1,3 +1,3 @@
 function custom_dashboard_help() {
-	echo '<p style="margin: 0"><strong>For help, Contact Troy Cartmill <a href="mailto:troy@reapandsow.net" rel="noopener">by email</a>.</strong></p><br /><p style="margin: 0"><strong><a style="font-size: 24px;" rel="noopener" href="//apexpipe.com/wp-admin/post.php?post=96&action=edit">Update New Pipe</a></strong></p><p><strong><a rel="noopener" style="font-size: 24px;" href="//apexpipe.com/wp-admin/post.php?post=768&action=edit">Update Used Pipe</a></strong></p><p><strong><a rel="noopener" style="font-size: 24px;" href="https://apexpipe.com/wp-admin/post.php?post=1243&action=edit">Update Bone Yard Deals</a></strong></p><p><strong><a rel="noopener" style="font-size: 24px;" href="https://apexpipe.com/wp-admin/post.php?post=3927&action=edit">Update Big Pipe List</a></strong></p>';
+	echo '<p style="margin: 0"><strong>For help, Contact Troy Cartmill <a href="mailto:troy@reapandsow.net" rel="noopener">by email</a>.</strong></p><br />';
 }
