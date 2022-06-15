@@ -1,0 +1,10 @@
+// Hide stuff in WP Admin Bar Frontend
+add_action('wp_head', 'rs_custom_dashboard');
+function rs_custom_dashboard()
+{
+    echo '<style>
+  #wpadminbar li#wp-admin-bar-edit .ab-sub-wrapper {
+    	display: none !important;
+	}
+  </style>';
+}
