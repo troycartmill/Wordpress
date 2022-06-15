@@ -1,0 +1,12 @@
+ // Register nav menus
+  function register_menus() {
+    register_nav_menus(
+      array(
+        'header-navigation' => __('Header Navigation'),
+        'secondary-header-menu' => __('Secondary Header Menu'),
+        'resources-navigation' => __('Resources Navigation'),
+        'html-sitemap' => __('HTML Sitemap')
+      )
+    );
+  }
+  add_action('init', 'register_menus');
