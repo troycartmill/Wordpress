@@ -1,0 +1,8 @@
+//* Redirect all pages to an external url
+function redirect_all_pages(){
+  if ( !is_user_logged_in() ){
+      wp_redirect( 'https://reapandsowmarketing.com' );
+      die;
+  }
+}
+add_action( 'template_redirect', 'redirect_all_pages' );
