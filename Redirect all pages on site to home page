@@ -1,0 +1,8 @@
+// Redirect all pages on site to home page
+function redirect_to_homepage() {
+    $homepage_id = get_option('page_on_front');
+    if ( ! is_page( $homepage_id ) && !is_user_logged_in() ) {                                                        
+         wp_redirect( home_url( 'index.php?page_id=' . $homepage_id ) ); 
+    }    
+}
+add_action( 'template_redirect', 'redirect_to_homepage' );
