@@ -1,0 +1,14 @@
+// You can disable the hotlinking of images from your WordPress site with a little bit of coding in the .htaccess file. Just add this code to the .htaccess file in your WordPress site’s root directory:
+// Be sure to replace yourdomain.com with your site’s domain name!
+
+#Disable image hotlinking with forbidden custom image option
+
+RewriteEngine on
+
+RewriteCond %{HTTP_REFERER} !^$
+
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?yourdomain.com [NC]
+
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?google.com [NC]
+
+RewriteRule \.(jpg|jpeg|png|gif)$ – [NC,F,L]
