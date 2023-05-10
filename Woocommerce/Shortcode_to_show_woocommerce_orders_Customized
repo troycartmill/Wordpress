@@ -1,0 +1,31 @@
+/*----------------------------------*/
+// Shortcode to show Classes taken in Dashboard
+/*--------*/
+
+function shortcode_show_my_classes() {
+
+    $args = array(
+        'customer_id' => get_current_user_id(),
+        'status'      => array( 'completed', 'processing' ),
+    );
+
+    $orders = wc_get_orders( $args );
+
+    if ( ! empty( $orders ) ) {
+        foreach ( $orders as $order ) {
+
+            $items = $order->get_items(); // Get the order items
+
+            foreach ( $items as $item ) {
+                $product_name = substr($item->get_name(), 18); 
+
+                echo "<p>" . $product_name . "</p>"; // Display the product name
+            }
+
+        }
+    } else {
+        echo 'No classes found.';
+    }
+wp_reset_postdata();
+}
+add_shortcode('show_my_classes', 'shortcode_show_my_classes');
