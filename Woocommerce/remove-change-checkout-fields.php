@@ -1,9 +1,9 @@
-/**
- Remove all possible fields
- **/
+// Remove all possible fields
 add_filter('woocommerce_checkout_fields', 'custom_override_checkout_fields');
 function custom_override_checkout_fields($fields) {
-	
+
+    // var_dump($fields);
+
 	// Billing fields
     //unset( $fields['billing']['billing_company'] );
     //unset( $fields['billing']['billing_email'] );
